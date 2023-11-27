@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    position: sticky;
+    background-color: #fff;
+}
+
+.card-video {
+    cursor: pointer;
+}
+
+.avt-channel {
+    border-radius: 50%;
+}
+
+/* i[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -100%;
+    left: 0;
+} */
+.button-group {
+    margin-top: 5px;
+}
+
+.button-group .btn {
+    margin: 12px 12px 12px 0;
+    padding: 2px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #f2f2f2;
+}
+
+.button-group .btn:hover {
+    background-color: #ebe9e9;
+}
+
+.button-group .btn:first-child {
+    background-color: #0f0f0f;
+    color: aliceblue;
+}
+
+.button-search {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0 20px 20px 0;
+    width: 60px;
+    height: 40px;
+    margin-left: -6px;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    right: 0px;
+    /* z-index: 1; */
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.search .search-input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 70%;
+    height: 40px;
+    border-radius: 20px 0 0 20px;
+    padding-left: 16px;
+    font-size: 14px;
+    /* border-right: none; */
+
+}
+
+.mic {
+
+    /* text-align: center;
+    align-items: center; */
+}
+
+.list-filter-button {
+    position: sticky;
+    top: 56px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.full-side-bar-large {
+    padding: 12px 15px;
+    /* overflow-y: auto; */
+
+}
+
+.footer-since2023 {
+    font-size: 12px;
+    padding: 16px 24px 0 0;
+}
+
+.introduction {
+    font-size: 13px;
+    padding: 12px 0px 0 0;
+}
+
+.introduction a {
+    color: #606060;
+}
+
+.introduction a:hover {
+    color: #606060;
+    text-decoration: none;
+}
+
+.list-video {
+    overflow-y: auto;
+}
+
+
+.side-bar-item {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.side-bar-item i::before {
+    margin-right: 16px;
+}
+
+.side-bar-item:hover {
+    background-color: #ebe9e9;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.add-border {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.primary-title {
+    color: #0f0f0f;
+    font-size: 16px;
+    padding: 0px;
+    padding-left: 2px;
+    font-weight: 600;
+}
+
+.side-bar-group-item {
+    padding: 12px 0 0 !important;
+
+}
+
+.home-page {
+    padding-top: 0;
+}
+
+.create-video {
+    padding: 8px 0;
+}
+
+.create-video .dropdown-item {
+    width: 180px;
+    height: 40px;
+    padding: 0 36px 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.card-video .dropdown-item span {
+    /* padding-left: 5px; */
+}
+
+.label-notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile, .noti, .create-video{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.noti {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.profile .profile-item {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.profile .profile-item:hover {
+    background-color: #f2f2f2;
+}
+
+.profile .profile-item span {
+    font-size: 14px;
+    /* padding-left: 15px; */
+}
+
+.profile .profile-item i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    line-height: 30px;
+}
+
+.profile-item .profile-item i::before {
+
+}
+
+.arrow-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-video>img {
+    border-radius: 10px;
+}
+
+.list-filter-button {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.list-filter-button>.button-group>.btn {
+    display: inline-block;
+    float: none;
+}
+
+.full-side-bar-medium span {
+    font-size: 10px;
+}
+
+.full-side-bar-medium i {
+    display: block;
+}
+
+.full-side-bar-medium .col-12 {
+    padding-top: 16px;
+    padding-bottom: 14px;
+    text-align: center;
+    padding-right: 0;
+    display: block;
+}
+
+.menu-button:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.card-video .lengthVideo {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+}

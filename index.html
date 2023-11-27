@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container-fluid" style="padding: 0; margin: 0;">
+
+        <!-- Header -->
+        <div class="header row d-flex align-items-center justify-content-between sticky-top" style="height: 56px;">
+
+            <!-- logo -->
+            <div class="col-5 col-sm-4 col-md-3 col-lg-2 pl-3 ">
+                <div class="d-block pl-4">
+                    <i class="fas fa-bars d-inline-block menu-button"></i>
+                    <a href="#">
+                        <img src="./image/logo_youtube.png" class="pl-2" width="90px" height="24px" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- search button -->
+            <div class="col-md-6 d-none d-sm-none d-md-block text-center search">
+                <div class="container-fluid d-flex align-content-center">
+                    <input type="text" class="search-input ml-3" placeholder="Tìm kiếm">
+                    <!-- <span class="icon">
+                        <i class="fas fa-keyboard keyboard"></i>
+                    </span> -->
+                    <button class="button-search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button
+                        class="ml-2 d-none d-sm-none d-md-none rounded-circle d-lg-inline-block border-0 rounded-circle p-0">
+                        <i class="fas fa-microphone mic p-3 rounded-circle fa-sm"
+                            style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"
+                            title="Tìm kiếm bằng giọng nói"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- right header -->
+            <div class="col-7 col-sm-8 col-md-3 d-flex justify-content-end">
+
+
+                <!-- search -->
+                <div class="d-inline-block d-sm-inline-block d-md-none d-lg-none d-inline-block">
+                    <button type="button" class="border-0 py-3 px-3 bg-white" data-toggle="dropdown">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <!-- mic -->
+                <div class="d-inline-block d-sm-inline-block d-md-inline-block d-lg-none d-inline-block">
+                    <button type="button" class="border-0 py-3 px-3 bg-white" data-toggle="dropdown">
+                        <i class="fas fa-microphone mic" title="Tìm kiếm bằng giọng nói"></i>
+                    </button>
+                </div>
+                <!-- Create -->
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="border-0 py-3 px-3 bg-white" data-toggle="dropdown">
+                        <i class="fas fa-video fa-lg" title="Tạo"></i>
+                    </button>
+                    <div class="dropdown-menu create-video">
+                        <div class="dropdown-item" href="#">
+                            <i class="far fa-caret-square-up fa-lg pr-3"></i>
+                            <span>Tải video lên</span>
+                        </div>
+                        <div class="dropdown-item" href="#">
+                            <i class="fas fa-podcast fa-lg pr-3"></i>
+                            <span>Phát trực tiếp</span>
+                        </div>
+                        <div class="dropdown-item" href="#">
+                            <i class="far fa-edit fa-lg pr-2"></i>
+                            <span>Tạo bài đăng</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- notification -->
+                <div class="dropdown dropleft d-inline-block">
+                    <button type="button" class="border-0 py-3 px-3 bg-white" data-toggle="dropdown">
+                        <i class="far fa-bell fa-lg" title="Thông báo"></i>
+                    </button>
+                    <div class="dropdown-menu noti " style="width: 420px;">
+                        <div class="label-notification">
+                            <span class="d-inline-block pl-3">Thông báo</span>
+                            <i class="fas fa-cog fa-lg pr-3"></i>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <!-- a notifi -->
+                        <div class="dropdown-item container-fluid">
+                            <div class="row" style="padding: 16px 16px 16px 0;">
+                                <div class="col-2 p-0">
+                                    <img src="./image/notification/avt-noti1.jpg" width="48px" height="48px" alt="">
+                                </div>
+                                <div class="col-7 p-0">
+                                    <p class="text-wrap p-0" style="font-size: 14px;">FIDE chess
+                                        đang phát trực tiếp: Round
+                                        10 FIDE World Youth Chess Championships 2023</p>
+                                    <p style="font-size: 12px;">12 giờ trước</p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./image/notification/noti1.jpg" width="86px" height="65px" alt="">
+                                    <!-- <i class="fas fa-ellipsis-v"></i> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-item container-fluid">
+                            <div class="row" style="padding: 16px 16px 16px 0;">
+                                <div class="col-2 p-0">
+                                    <img src="./image/notification/avt-noti2.jpg" width="48px" height="48px" alt="">
+                                </div>
+                                <div class="col-7 p-0">
+                                    <p class="text-wrap p-0" style="font-size: 14px;">VFacts đã tải lên: #670
+                                        Đây Là Sự
+                                        Kiện Thảm Khốc Sẽ Xảy Ra Trong 1.000 Năm Tới!</p>
+                                    <p style="font-size: 12px;">20 giờ trước</p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./image/notification/noti2.jpg" width="86px" height="65px" alt="">
+                                    <!-- <i class="fas fa-ellipsis-v"></i> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-item container-fluid">
+                            <div class="row" style="padding: 16px 16px 16px 0;">
+                                <div class="col-2 p-0">
+                                    <img src="./image/notification/avt-noti3.jpg" width="48px" height="48px" alt="">
+                                </div>
+                                <div class="col-7 p-0">
+                                    <p class="text-wrap p-0" style="font-size: 14px;">FIDE chess
+                                        đang phát trực tiếp: Round
+                                        10 FIDE World Youth Chess Championships 2023</p>
+                                    <p style="font-size: 12px;">12 giờ trước</p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./image/notification/noti3.jpg" width="86px" height="65px" alt="">
+                                    <!-- <i class="fas fa-ellipsis-v"></i> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- profile -->
+                <div class="dropdown dropleft d-inline-block">
+                    <button type="button" class="border-0 bg-white py-2 px-4" data-toggle="dropdown">
+                        <img src="./image/ech.jpg" style="border-style: none;" class="border-white rounded-circle"
+                            width="32px" height="32px" alt="">
+                    </button>
+                    <div class="dropdown-menu profile rounded" style="width: 300px;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 p-0">
+                                    <div class="drop-item container-fluid p-3">
+                                        <div class="row">
+                                            <div class="col-2 ">
+                                                <img src="./image/ech.jpg" style="border-radius: 50%;" width="40px"
+                                                    height="40px" alt="">
+                                            </div>
+                                            <div class="col-10 pl-4">
+                                                <h5>Username</h5>
+                                                <h6>@username</h6>
+                                                <a href="#" style="font-size: 14px; text-decoration: none;">Xem kênh của
+                                                    bạn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="drop-item container-fluid p-0">
+                                        <div class="profile-item px-3">
+                                            <i class="fab fa-google fa-lg"></i>
+                                            <span>Tài khoản Google
+                                            </span>
+                                        </div>
+                                        <div class="profile-item arrow-right px-3">
+                                            <div>
+                                                <i class="far fa-user-circle fa-lg"></i>
+                                                <span>Chuyển đổi tài khoản</span>
+                                            </div>
+                                            <i class="fas fa-chevron-right text-right"></i>
+                                        </div>
+                                        <div class="profile-item px-3">
+                                            <i class="fas fa-sign-out-alt fa-lg"></i>
+                                            <span>Đăng xuất
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+
+                                    <div class="drop-item container-fluid p-0">
+                                        <div class="profile-item px-3">
+                                            <i class="fab fa-youtube-square fa-lg"></i>
+                                            <span>Youtube Studio
+                                            </span>
+                                        </div>
+                                        <div class="profile-item px-3">
+                                            <i class="far fa-credit-card fa-lg"></i>
+                                            <span>Giao dịch mua và gói thành viên
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+
+                                    <div class="drop-item container-fluid p-0">
+                                        <div class="profile-item px-3">
+                                            <i class="fas fa-server fa-lg"></i>
+                                            <span>Dữ liệu của bạn trong YouTube
+                                            </span>
+                                        </div>
+                                        <div class="profile-item arrow-right px-3">
+                                            <div>
+                                                <i class="far fa-moon fa-lg"></i>
+                                                <span>Giao diện: Sáng
+                                                </span>
+                                            </div>
+                                            <i class="fas fa-chevron-right text-right"></i>
+                                        </div>
+                                        <div class="profile-item arrow-right px-3">
+                                            <div>
+                                                <i class="fas fa-language fa-lg"></i>
+                                                <span>Ngôn ngữ: Tiếng Việt
+                                                </span>
+                                            </div>
+                                            <i class="fas fa-chevron-right text-right"></i>
+                                        </div>
+                                        <div class="profile-item arrow-right px-3">
+                                            <div>
+                                                <i class="fas fa-user-shield fa-lg"></i>
+                                                <span>Chế độ hạn chế: Đã tắt
+                                                </span>
+                                            </div>
+                                            <i class="fas fa-chevron-right text-right"></i>
+                                        </div>
+                                        <div class="profile-item arrow-right px-3">
+                                            <div>
+                                                <i class="fas fa-globe fa-lg"></i>
+                                                <span>Địa điểm: Việt Nam
+                                                </span>
+                                            </div>
+                                            <i class="fas fa-chevron-right text-right"></i>
+                                        </div>
+                                        <div class="profile-item arrow-right px-3">
+                                            <div>
+                                                <i class="far fa-keyboard fa-lg"></i>
+                                                <span>Phím tắt
+                                                </span>
+                                            </div>
+                                            <i class="fas fa-chevron-right text-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+
+                                    <div class="drop-item container-fluid p-0">
+                                        <div class="profile-item px-3">
+                                            <i class="fas fa-cog fa-lg"></i>
+                                            <span>Cài đặt</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown-divider"></div>
+                                    <div class="drop-item container-fluid p-0">
+                                        <div class="profile-item px-3">
+                                            <i class="far fa-question-circle fa-lg"></i>
+                                            <span>Trợ giúp</span>
+                                        </div>
+                                        <div class="profile-item px-3">
+                                            <i class="fas fa-inbox fa-lg"></i>
+                                            <span>Gửi ý kiến phản hồi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Body -->
+        <div class="row">
+
+            <!-- nav-side-bar large-->
+            <div class="col-lg-2 d-sm-none d-none d-md-none d-lg-block full-side-bar-large">
+                <div class="container-fluid side-bar">
+                    <div class="container-fluid side-bar-group-item home-page p-0">
+                        <div class="side-bar-item active">
+                            <i class="fas fa-home fa-lg"></i>
+                            <span style="font-weight: 600;">Trang chủ</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-film fa-lg"></i>
+                            <span>Shorts</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fab fa-youtube-square fa-lg"></i>
+                            <span>Kênh đăng ký</span>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid side-bar-group-item your-channel add-border">
+                        <div class="side-bar-item primary-title">
+                            <span>Bạn</span>
+                            <i class="pl-2 fas fa-chevron-right fa-lg"></i>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="far fa-id-badge fa-lg"></i>
+                            <span>Kênh của bạn</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-history fa-lg"></i>
+                            <span>Video đã xem</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-photo-video fa-lg"></i>
+                            <span>Video của bạn</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="far fa-clock fa-lg"></i>
+                            <span>Xem sau</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-angle-down fa-lg"></i>
+                            <span>Thêm</span>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid side-bar-group-item subcribes">
+                        <div class="side-bar-item primary-title">
+                            <span>Kênh đăng ký</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                            <span>Bà Tân Vlogs</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                            <span>Ông Thọ Vlogs</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                            <span>Ông Hải Vlogs</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                            <span>Ông già noel Vlogs</span>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid side-bar-group-item explore add-border">
+                        <div class="side-bar-item primary-title">
+                            <span>Khám phá</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fab fa-hotjar fa-lg"></i>
+                            <span>Thịnh hành</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-music fa-lg"></i>
+                            <span>Âm nhạc</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-gamepad fa-lg"></i>
+                            <span>Trò chơi</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="far fa-newspaper fa-lg"></i>
+                            <span>Tin tức</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-trophy fa-lg"></i>
+                            <span>Thể thao</span>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid side-bar-group-item youtube-services">
+                        <div class="side-bar-item primary-title">
+                            <span>Dịch vụ khác của Youtube</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fab fa-youtube fa-lg" style="color: #d80202;"></i>
+                            <span>Youtube Premium</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-play-circle fa-lg" style="color: #d80202;"></i>
+                            <span>Youtube Studio</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-headphones fa-lg" style="color: #d80202;"></i>
+                            <span>Youtube Music</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-baby-carriage fa-lg" style="color: #d80202;"></i>
+                            <span>Youtube Kids</span>
+                        </div>
+
+                    </div>
+
+                    <div class="container-fluid side-bar-group-item settings add-border">
+                        <div class="side-bar-item">
+                            <i class="fas fa-cog fa-lg"></i>
+                            <span>Cài đặt</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="far fa-flag fa-lg"></i>
+                            <span>Nhật ký báo cáo</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="far fa-question-circle fa-lg"></i>
+                            <span>Trợ giúp</span>
+                        </div>
+                        <div class="side-bar-item">
+                            <i class="fas fa-inbox fa-lg"></i>
+                            <span>Gửi ý kiến phản hồi</span>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid side-bar-group-item footer">
+                        <div class="introduction">
+                            <a href="#">Giới thiệu</a> <a href="#">Báo chí</a> <a href="#">Bản quyền</a>
+                            <a href="#">Liên hệ với chúng tôi</a> <a href="#">Người sáng tạo</a> <a href="#">Quảng
+                                cáo</a>
+                            <a href="#">Nhà phát triển</a>
+                        </div>
+                        <div class="introduction">
+                            <a href="#">Điều khoản</a> <a href="#">Quyền riêng tư</a>
+                            <a href="#">Chính sách an toàn </a> <a href="#">Cách Youtube hoạt động</a> <a href="#">Thử
+                                các tính năng mới</a>
+                        </div>
+                        <div class="footer-since2023">© 2023 Google LLC</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- nav-side-bar medium-->
+            <div class="col-md-1 d-sm-none d-none d-md-block d-lg-none full-side-bar-medium">
+                <div class="row">
+                    <div class="col-12">
+                        <i class="fas fa-home fa-lg"></i>
+                        <span>Trang chủ</span>
+                    </div>
+                    <div class="col-12">
+                        <i class="fas fa-film fa-lg"></i>
+                        <span>Shorts</span>
+                    </div>
+                    <div class="col-12">
+                        <i class="fab fa-youtube-square fa-lg"></i>
+                        <span>Kênh đăng ký</span>
+                    </div>
+                    <div class="col-12">
+                        <i class="far fa-user fa-lg"></i>
+                        <span>Bạn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- video -->
+            <div class="col-lg-10 col-md-11 col-sm-12 col-12 full-video">
+                <div class="container-fluid">
+                    <div class="row list-filter-button">
+                        <div class="col-12 button-group ">
+                            <button class="btn ">Tất cả</button>
+                            <button class="btn ">Âm nhạc</button>
+                            <button class="btn ">Danh sách kết hợp</button>
+                            <button class="btn ">Trực tiếp</button>
+                            <button class="btn ">Trò chơi</button>
+                            <button class="btn ">Tin tức</button>
+                            <!-- <button class="btn ">Tin tức</button> -->
+                            <!-- <button class="btn ">Toán học</button>
+                            <button class="btn ">Thiên nhiên</button>
+                            <button class="btn ">Hoạt hình</button> -->
+                            <button class="btn ">Nấu ăn</button>
+                            <button class="btn ">Mới tải lên gần đây</button>
+                            <button class="btn ">Đã xem</button>
+                            <button class="btn ">Đề xuất mới</button>
+                        </div>
+                    </div>
+                    <div class="row pt-4 list-video">
+
+                        <!-- Ads -->
+                        <div class="container-fluid mb-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-12 col-sm-12 col-md-6 card border-0 ">
+                                    <img src="./image/video-ads.png" style="border-radius: 10px; cursor: pointer;"
+                                        class="" alt="">
+                                </div>
+                                <div class="col-lg-8 d-none d-sm-none d-md-block d-lg-block col-md-6 card border-0">
+                                    <div class="row">
+                                        <div class="col-lg-12 ">
+                                            <img src="./image/banner-ads.png"
+                                                style="border-radius: 10px; cursor: pointer;" width="100%" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 pl-3 " style="height: 35%;">
+                                        <div class="col-lg-2 d-none d-md-none d-lg-inline-block p-0 
+                                        d-flex text-center align-items-center">
+                                            <img src="./image/avt-ads.jpg" class="rounded-circle" height="80px"
+                                                width="80px" alt="">
+                                        </div>
+                                        <div class=" col-lg-10 col-md-12 d-inline-block
+                                            d-md-inline-block d-lg-inline-block px-0">
+                                            <div class="container-fluid p-0">
+                                                <h5 class="mt-2" style="font-weight: 600; font-size: 16px;">
+                                                    GrabExpress bộ đôi ship rẻ</h5>
+                                                <p class="d-inline-block d-sm-inline-block d-lg-inline-block"
+                                                    style="font-size: 14px; margin-bottom: 5px;">
+                                                    <b>Được tài trợ</b> - Grab Offical
+                                                </p>
+                                                <button class=" ml-3 btn btn-primary d-none d-md-none d-lg-inline-block"
+                                                    style="border-radius: 35px;">
+                                                    Đặt ngay
+                                                </button>
+                                            </div>
+                                            <button class="btn btn-primary d-md-block d-none d-lg-none"
+                                                style="border-radius: 35px;">
+                                                Đặt ngay
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video -->
+                        <div class="container-fluid p-0">
+                            <div class="row videos">
+
+                            </div>
+
+                            <!-- <div class="col-lg-4 col-md-6 col-sm-12 col-12 videos"> -->
+                                <!-- <div class="card card-video border-0">
+                                    <img class="card-img-top " src="./image/thumbnail/thumbnail1.jpg" alt="">
+                                <div class="card-info mt-2">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="./image/avatarChannel/avatar1.jpg" class="avt-channel" alt="">
+                                        </div>
+                                        <div class="col-10 pl-4">
+                                            <h5 class="card-title overflow-hidden">Complete Spring Boot Tutorial |
+                                                Spring Boot Tutorial
+                                                </h6>
+                                                <p class="card-text">Bruno Mars</p>
+                                                <div>
+                                                    <span class="d-inline">9,5 Tr lượt xem</span> -
+                                                    <span class="d-inline">6 năm trước</span>
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> -->
+                            <!-- </div> -->
+                        </div>
+
+                        <!-- <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="card card-video border-0">
+                                <img class="card-img-top " src="./image/thumbnail/thumbnail2.webp" alt="">
+                                <div class="card-info mt-2">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="./image/avatarChannel/avatar2.jpg" class="avt-channel" alt="">
+                                        </div>
+                                        <div class="col-10 pl-4">
+                                            <h5 class="card-title">Complete Spring Boot Tutorial | Spring Boot Tutorial
+                                            </h5>
+                                            <p class="card-text">Bruno Mars</p>
+                                            <div>
+                                                <span class="d-inline">9,5 Tr lượt xem</span> -
+                                                <span class="d-inline">6 năm trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
+    <script src="./index.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
