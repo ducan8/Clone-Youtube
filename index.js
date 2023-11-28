@@ -123,27 +123,11 @@ let FullData = [
 ]
 
 
-let menuBtn = document.querySelector(".menu-button");
-
-menuBtn.addEventListener("click", () => {
-    sidebarLarge = document.querySelector(".full-side-bar-large");
-    sidebarMedium = document.querySelector(".full-side-bar-medium");
-    if (sidebarMedium.classList.contains("d-lg-none")) {
-        sidebarMedium.classList.replace("d-lg-none", "d-lg-block");
-        sidebarLarge.classList.replace("d-lg-block", "d-lg-none");
-
-    } else if (sidebarLarge.classList.contains("d-lg-none")) {
-        sidebarMedium.classList.replace("d-lg-block", "d-lg-none");
-        sidebarLarge.classList.replace("d-lg-none", "d-lg-block");
-    }
-})
-
-
 let videos = document.querySelector(".videos");
-console.log(videos);
+// console.log(videos);
 let html = FullData.map((video) => {
     return `
-    <div class="col-lg-4 col-md-6 col-sm-12 col-12 pb-3">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12 pb-3 card-video-container">
         <div class="card card-video border-0">
             <div class="container-fluid p-0" style="position: relative;">
                 <img class="card-img-top " src="${video.imageVideo}" alt="">
@@ -168,5 +152,61 @@ let html = FullData.map((video) => {
     </div>
     `
 }).join("")
-console.log(html);
+// console.log(html);
 videos.innerHTML = html
+
+
+let menuBtn = document.querySelector(".menu-button");
+let sidebarLarge = document.querySelector(".full-side-bar-large");
+let sidebarMedium = document.querySelector(".full-side-bar-medium");
+let sidebarToogle = document.querySelector(".full-side-bar-toogle");
+let videoSide = document.querySelector(".full-video");
+let cardVideo = document.querySelectorAll(".card-video-container");
+let subBackground = document.querySelector(".sub-background");
+
+menuBtn.addEventListener("click", () => {
+
+    if (sidebarMedium.classList.contains("d-lg-none")) {
+        sidebarMedium.classList.replace("d-lg-none", "d-lg-block");
+        sidebarLarge.classList.replace("d-lg-block", "d-lg-none");
+        sidebarMedium.classList.add("col-lg-1");
+
+        videoSide.classList.add("col-xl-11");
+        videoSide.classList.replace("col-lg-10", "col-lg-11");
+
+        cardVideo.forEach((video) => {
+            video.classList.add("col-xl-3");
+        })
+
+    } else if (sidebarLarge.classList.contains("d-lg-none")) {
+        sidebarMedium.classList.replace("d-lg-block", "d-lg-none");
+
+        sidebarLarge.classList.replace("d-lg-none", "d-lg-block");
+
+        videoSide.classList.replace("col-lg-11", "col-lg-10");
+        videoSide.classList.remove("col-xl-11");
+        cardVideo.forEach((video) => {
+            video.classList.remove("col-xl-3");
+        })
+    }
+
+    if (window.innerWidth <= 992) {
+        if (sidebarToogle.classList.contains("d-sm-none")) {
+            sidebarToogle.classList.contains("d-sm-block")
+            sidebarToogle.classList.replace("d-sm-none", "d-sm-block");
+            sidebarToogle.classList.remove("d-none");
+
+        }
+        else if (sidebarToogle.classList.contains("d-sm-block")) {
+            sidebarToogle.classList.replace("d-sm-block", "d-sm-none");
+            sidebarToogle.classList.add("d-none");
+            console.log("sidebarToogle");
+        }
+    }
+})
+
+subBackground.onclick = () => {
+    sidebarToogle.classList.replace("d-sm-block", "d-sm-none");
+    sidebarToogle.classList.add("d-none");
+    console.log("sidebarToogle");
+}
