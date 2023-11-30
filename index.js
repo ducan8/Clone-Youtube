@@ -210,6 +210,8 @@ subBackground.onclick = () => {
     sidebarToogle.classList.replace("d-sm-block", "d-sm-none");
     sidebarToogle.classList.add("d-none");
     console.log("sidebarToogle");
+    videoSide.style.position = "relative";
+
 }
 
 // document.body.addEventListener('wheel', () => {
