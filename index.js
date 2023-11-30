@@ -192,15 +192,16 @@ menuBtn.addEventListener("click", () => {
 
     if (window.innerWidth <= 992) {
         if (sidebarToogle.classList.contains("d-sm-none")) {
-            sidebarToogle.classList.contains("d-sm-block")
+            // sidebarToogle.classList.contains("d-sm-block")
             sidebarToogle.classList.replace("d-sm-none", "d-sm-block");
             sidebarToogle.classList.remove("d-none");
-
+            videoSide.style.position = "fixed";
         }
         else if (sidebarToogle.classList.contains("d-sm-block")) {
             sidebarToogle.classList.replace("d-sm-block", "d-sm-none");
             sidebarToogle.classList.add("d-none");
             console.log("sidebarToogle");
+            videoSide.style.position = "relative";
         }
     }
 })
@@ -210,3 +211,18 @@ subBackground.onclick = () => {
     sidebarToogle.classList.add("d-none");
     console.log("sidebarToogle");
 }
+
+// document.body.addEventListener('wheel', () => {
+//     if (sidebarToogle.classList.contains("d-sm-block")) {
+        
+//     }
+// })
+
+// document.querySelector('.sub-background').addEventListener('wheel', preventScroll, { passive: false });
+
+// function preventScroll(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+
+//     return false;
+// }
